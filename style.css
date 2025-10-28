@@ -16,13 +16,11 @@
     
 }
 .header{
-    width: 650px;
-    padding: 10px;
-    position: relative;
-    left: 60px;
+    width: 100%;
+    padding: 10px 60px;
     display: flex;
     justify-content: space-between;
-    /* margin-left: -120px; */
+    box-sizing: border-box;
 }
 .header img{
     height: 50px;
@@ -49,8 +47,11 @@
     padding: 50px;
     line-height: 35px;
 }
+.inner-hero-section h1{
+    font-size: 4vw;
+}
 .inner-hero-section #inner-para{
-    font-size: 12px;
+    font-size: 2vw;
 }
 .inner-hero-section #inner-para2{
     font-size: 9px;
@@ -101,9 +102,10 @@ main{
     /* width: 500px; */
     /* border: 2px solid white; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 30px;
+    margin-right:20px;
 }
  .posters div{
     height:170px ;
@@ -185,9 +187,11 @@ main{
 .intro-divs{
     /* border:2px solid white ;  */
     height: 250px;
+    padding-left: 70px;
 }
 .intro-divs h5{
-    margin-left: 70px;
+    color: white;
+    margin-left: 0;
     margin-bottom: 15px;
     font-size: 15px;
 }
@@ -196,6 +200,7 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-right: 60px;
 }
 .inner-intro div{
     /* border: 2px solid white; */
@@ -205,10 +210,12 @@ main{
     padding: 15px;
     background: linear-gradient(180deg, #390861a3 0%, #0c0c14 100%);
     border-radius: 10px;
+    overflow: hidden;
 
 }
 .inner-intro div h4{
     color: white;
+    font-size: 14px;
 }
 .inner-intro div p{
     font-size: 9px;
@@ -254,13 +261,14 @@ main{
     margin-left: 17px;
 }
 .inner-accordions div{
-    width:630px ;
+    width:100% ;
+    max-width: 630px;
     height:50px ;
     margin-left: 15px;
     margin-top: 8px;
     background-color: #2D2D2D;
     transition: all 0.5s;
-} 
+}
 .inner-accordions div:hover{
     background-color:#414141 ;
 }
@@ -269,7 +277,15 @@ main{
     position: relative;
     left: 10px;
     top: -5px;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+.inner-accordions div p span{
+    font-size: 40px;
+    position: relative;
+    right: 0;
 }
 
 /* last input bar */
@@ -284,7 +300,10 @@ main{
     color: #FFFFE7;
 }
 .last-bar{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     padding: 20px;
 }
 #last-dibba{
@@ -383,4 +402,401 @@ footer #sala{
 .lm{
     color: #448EF4;
     text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 10vh;
+        min-height: 600px;
+    }
+
+    .header {
+        width: 100%;
+        left: 0;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    .header img {
+        height: 40px;
+        width: 100px;
+    }
+
+    .header a button {
+        font-size: 10px;
+        height: 25px;
+        width: 60px;
+    }
+
+    .inner-hero-section {
+        padding: 30px 20px;
+        line-height: 30px;
+    }
+
+    .inner-hero-section h1 {
+        font-size: 1em;
+    }
+
+    .inner-hero-section #inner-para {
+        font-size: 10px;
+    }
+
+    .inner-hero-section #inner-para2 {
+        font-size: 12px;
+    }
+
+    .inner-hero-section input {
+        height: 40px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .inner-hero-section a button {
+        height: 40px;
+        width: 120px;
+    }
+
+    .movie-posters-divs {
+        padding: 20px;
+    }
+
+    .posters {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .posters div {
+        height: 150px;
+        width: 100px;
+    }
+
+    #post-div1 h1, #post-div2 h1, #post-div3 h1, #post-div4 h1 {
+        font-size: 50px;
+        top: 70px;
+        left: -10px;
+    }
+
+    .intro-divs h5 {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .inner-intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-intro div {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    .inner-intro div h4 {
+        font-size: 16px;
+    }
+
+    .inner-intro div p {
+        font-size: 12px;
+    }
+
+    .inner-intro div img {
+        position: static;
+        margin-top: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    #div1 img, #div2 img, #div3 img, #div4 img {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .accordion-section {
+        padding: 20px;
+    }
+
+    .accordion-section h5 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .inner-accordions div {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .inner-accordions div p {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .inner-accordions div p span {
+        position: static;
+        float: none;
+        margin: 0;
+    }
+
+    .last-input p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .last-bar {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #last-dibba {
+        width: 100%;
+        max-width: 300px;
+        height: 40px;
+    }
+
+    .last-bar a button {
+        width: 150px;
+        height: 40px;
+    }
+
+    footer #sala {
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    #select-box {
+        margin-left: 20px;
+        width: 80px;
+        height: 25px;
+    }
+
+    #lastpara {
+        padding-left: 20px;
+        font-size: 11px;
+    }
+
+    #exactlast {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 10px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero-section {
+        height: auto;
+        min-height: 300px;
+        padding-bottom: 50px;
+    }
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header img {
+        height: 35px;
+        width: 80px;
+    }
+
+    .header a button {
+        font-size: 9px;
+        height: 22px;
+        width: 50px;
+    }
+
+    .inner-hero-section {
+        padding: 20px 15px;
+        line-height: 25px;
+    }
+
+    .inner-hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .inner-hero-section #inner-para {
+        font-size: 12px;
+    }
+
+    .inner-hero-section #inner-para2 {
+        font-size: 12px;
+    }
+
+    .inner-hero-section input {
+        height: 30px;
+        max-width: 210px;
+        margin-top: 30px;
+        
+    }
+
+    .inner-hero-section a button {
+        height: 32px;
+        width: 90px;
+        font-size: 12px;
+        margin-top: 25px
+    }
+
+    .movie-posters-divs {
+        padding: 15px;
+        height: auto;
+        
+    }
+
+    .movie-posters-divs h5 {
+        font-size: 14px;
+        left: 10px;
+       
+    }
+
+    .posters {
+        gap: 8px;
+    }
+
+    .posters div {
+        height: 120px;
+        width: 80px;
+    }
+
+    #post-div1 h1, #post-div2 h1, #post-div3 h1, #post-div4 h1 {
+        font-size: 40px;
+        top: 60px;
+        left: -8px;
+    }
+
+    .intro-divs {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .intro-divs h5 {
+        margin-left: 15px;
+        /* margin-top: 10px; */
+        font-size: 14px;
+        position: relative;
+        top: 15px;
+    }
+
+    .inner-intro div {
+        width: 95%;
+        max-width: 280px;
+        padding: 15px;
+        margin: 8px 0;
+    }
+
+    .inner-intro div h4 {
+        font-size: 16px;
+    }
+
+    .inner-intro div p {
+        font-size: 13px;
+    }
+
+    .inner-intro div img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .accordion-section {
+        padding: 15px;
+    }
+
+    .accordion-section h5 {
+        font-size: 18px;
+    }
+
+    .inner-accordions div {
+        height: 45px;
+        margin-top: 6px;
+    }
+
+    .inner-accordions div p {
+        font-size: 15px;
+        padding-right: 8px;
+    }
+
+    .inner-accordions div p span {
+        font-size: 30px;
+    }
+
+    .last-input {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .last-input p {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .last-bar {
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    #last-dibba {
+        max-width: 250px;
+        height: 35px;
+    }
+
+    .last-bar a button {
+        width: 120px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    footer #sala {
+        padding-left: 15px;
+        font-size: 11px;
+    }
+
+    .footer-links {
+        margin-left: 15px;
+        margin-top: 15px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    #select-box {
+        margin-left: 15px;
+        width: 75px;
+        height: 22px;
+        font-size: 11px;
+    }
+
+    #lastpara {
+        padding-left: 15px;
+        font-size: 10px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    #exactlast {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 9px;
+        padding-bottom: 60px;
+    }
 }
